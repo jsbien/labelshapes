@@ -1,0 +1,42 @@
+Build Instructions for has_composite_shapes.cpp
+==============================================
+
+1. Install Dependencies
+------------------------
+Install the DjVuLibre development package:
+
+```bash
+sudo apt update
+sudo apt install libdjvulibre-dev
+```
+
+2. Clone the Repository
+------------------------
+```bash
+git clone https://github.com/jsbien/labelshapes.git
+cd labelshapes
+```
+
+3. Compile the Tool
+---------------------
+Use `g++` and link to DjVuLibre:
+
+```bash
+g++ -o has_composite_shapes has_composite_shapes.cpp `pkg-config --cflags --libs ddjvuapi`
+```
+
+If `pkg-config` fails, use:
+
+```bash
+g++ -o has_composite_shapes has_composite_shapes.cpp -ldjvulibre
+```
+
+4. Run the Program
+-------------------
+```bash
+./has_composite_shapes yourfile.djvu
+```
+
+- It prints each composite shape detected (made of multiple blits).
+- Exit code `0`: no composite shapes.
+- Exit code `1`: composite shapes found.
