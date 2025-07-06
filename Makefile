@@ -1,6 +1,6 @@
 CXX = g++
-CXXFLAGS = -Wall -g `pkg-config --cflags ddjvuapi`
-LDFLAGS = `pkg-config --libs ddjvuapi`
+CXXFLAGS = -Wall -g
+LDFLAGS = -ldjvulibre
 
 TARGET = has_composite_shapes
 SRC = has_composite_shapes.cpp
