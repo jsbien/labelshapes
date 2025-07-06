@@ -1,6 +1,6 @@
 CXX = g++
-CXXFLAGS = -Iexternal -std=c++2a $(PTHREAD_CFLAGS)
-LDLIBS = -ldjvulibre $(PTHREAD_LIBS)
+CXXFLAGS = -Iexternal -std=c++2a -pthread
+LDLIBS = -ldjvulibre -pthread
 
 TARGET = has_composite_shapes
 SRC = has_composite_shapes.cpp
