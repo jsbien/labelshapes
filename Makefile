@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall -g -Iexternal
 LDFLAGS = -ldjvulibre
 
 TARGET = has_composite_shapes
