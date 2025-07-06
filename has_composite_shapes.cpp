@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 
     int composite_count = 0;
     for (int i = 0; i < doc->get_pages_num(); ++i) {
-        GP<DjVuPage> page = doc->get_page(i, false);
+        GP<DjVuImage> page = doc->get_page(i, false);
         page->wait_for_decode();
 
         GP<JB2Image> image = page->get_jb2image();
@@ -23,14 +23,13 @@ int main(int argc, char **argv) {
         if (!dict) continue;
 
         for (int j = 0; j < dict->get_shape_count(); ++j) {
-            const JB2Shape *shape = dict->get_shape(j);
-            if (!shape) continue;
-
-            if (!shape->bitmap && shape->blits.size() > 1) {
+            const JB2Shape *shape = &dict->get_shape(j);
+            if (!shape->is_bitmap_shape() && shape->blit_count() > 1) {
                 std::cout << "Page " << i + 1 << ": Shape " << j << " is composite ("
-                          << shape->blits.size() << " blits)\n";
+                          << shape->blit_count() << " blits)\n";
                 composite_count++;
             }
+        }
         }
     }
 
