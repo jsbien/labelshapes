@@ -1,6 +1,6 @@
 #include <iostream>
-#include <libdjvu/DjVuDocument.h>
-#include <libdjvu/JB2Image.h>
+#include <DjVuDocument.h>
+#include <JB2Image.h>
 
 int main(int argc, char **argv) {
     if (argc < 2) {
