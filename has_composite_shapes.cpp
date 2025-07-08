@@ -1,6 +1,8 @@
+# g++ -I. -std=c++2a -pthread -o has_composite_shapes has_composite_shapes.cpp -ldjvulibre -pthread
+
 #include <iostream>
-#include <DjVuDocument.h>
-#include <JB2Image.h>
+#include <external/DjVuDocument.h>
+#include <external/JB2Image.h>
 
 int main(int argc, char **argv) {
     if (argc < 2) {
