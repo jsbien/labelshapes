@@ -1,5 +1,5 @@
-# g++ -I. -std=c++2a -pthread -o has_composite_shapes has_composite_shapes.cpp -ldjvulibre -pthread
-
+#define HAVE_CONFIG_H
+#include "config.h"
 #include <iostream>
 #include <external/DjVuDocument.h>
 #include <external/JB2Image.h>
