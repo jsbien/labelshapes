@@ -9,7 +9,7 @@
 #include "fix_stdint.h"
 #include <libdjvu/ddjvuapi.h>
 #include "external/JB2Image.h"
-#include "qdjvu.h"
+#include "djvuimage_utils.h"
 #include "getjb2dict.h"
 
 DJVU::JB2Dict* get_jb2dict_from_page(ddjvu_page_t* page)
