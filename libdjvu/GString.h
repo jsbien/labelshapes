@@ -136,8 +136,11 @@ typedef unsigned __int32 uint32_t;
 typedef unsigned __int16 uint16_t;
 # else
 # pragma message("Please verify defs for uint32_t and uint16_t")
-typedef unsigned int   uint32_t // verify
-typedef unsigned short uint16_t; // verify
+// These typedefs must not conflict with <cstdint>
+#include <cstdint>
+using uint16_t = std::uint16_t;
+using uint32_t = std::uint32_t;
+
 # endif
 #endif
 
