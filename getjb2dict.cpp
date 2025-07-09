@@ -6,7 +6,8 @@
 // as published by the Free Software Foundation; either version 2 of the License,
 // or (at your option) any later version.
 
-#include "fix_stdint.h"
+#include <cstdint>  // ensures uint16_t and uint32_t are known before DjVu headers
+
 #include <libdjvu/ddjvuapi.h>
 #include "external/JB2Image.h"
 #include "djvuimage_utils.h"
