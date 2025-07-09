@@ -1,4 +1,5 @@
-#include "fix_stdint.h"
+#include <cstdint>  // ensures uint16_t and uint32_t are known before DjVu headers
+
 #include "djvuimage_utils.h"
 
 // This function is based on djview4shapes/src/qdjvu.cpp
