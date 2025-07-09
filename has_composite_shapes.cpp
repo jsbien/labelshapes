@@ -1,3 +1,6 @@
+// Add this as the FIRST line in getjb2dict.cpp and has_composite_shapes.cpp
+
+#include <cstdint>
 #include <iostream>
 #include <ddjvuapi.h>
 #include "external/DjVuImage.h"
