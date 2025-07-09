@@ -7,8 +7,8 @@
 // or (at your option) any later version.
 
 #include <libdjvu/ddjvuapi.h>
-#include "external/DjVuImage.h"
 #include "external/JB2Image.h"
+#include "qdjvu.h"
 #include "getjb2dict.h"
 
 DJVU::JB2Dict* get_jb2dict_from_page(ddjvu_page_t* page)
