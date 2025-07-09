@@ -10,8 +10,8 @@
  * License: GNU General Public License v2 or later
  * See: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  *
- * This file provides access to the JB2 dictionary from a decoded DjVu page,
- * reusing internal DjVuLibre structures without modifying the library itself.
+ * This header declares the function get_jb2dict_from_page() for retrieving
+ * the JB2Dict object from a decoded DjVu page using libdjvulibre internals.
  */
 
 #ifndef GETJB2DICT_H
