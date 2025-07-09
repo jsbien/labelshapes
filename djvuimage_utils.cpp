@@ -1,3 +1,4 @@
+#include "override_stdint_and_threads.h"
 #include "fix_stdint.h"
 #include "djvuimage_utils.h"
 
